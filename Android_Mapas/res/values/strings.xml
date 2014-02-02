@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Android_Mapas</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_android__mapas">Mapas</string>
+    <string name="btvergasolinera_label">Localizar</string>
+    <string name="btlimpiar_label">Limpiar</string>
+    
+    <string name="error_message">Error al cargar los datos</string>
+    <string name="datos_message">Datos cargados</string>
+    
+    <string name="imagen_label">Imagen</string>
+
+</resources>

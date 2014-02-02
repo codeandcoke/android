@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">Android_WS</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_android_ws">Android Web Services</string>
+    <string name="btcargar_label">Cargar</string>
+    <string name="label_label">Posición:</string>
+    
+    <string name="datos_message">Datos Cargados</string>
+    <string name="error_message">Error al cargar los datos</string>
+
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Databases</string>
+    <string name="listado_alumnos_title">List</string>
+    <string name="nuevo_alumno_title">Register</string>
+    
+    <string name="menu_settings">Options</string>
+    
+    <string name="aceptar_message">Accept</string>
+    <string name="cancelar_message">Cancel</string>
+    <string name="empty_message">No data</string>
+    <string name="confirma_alta_message">Student registered</string>
+
+    <string name="lbnombre_label">Name</string>
+    <string name="lbasignatura_label">Subject</string>
+    <string name="btalta_label">Save</string>
+</resources>
