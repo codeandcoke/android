@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-	<item android:id="@+id/ctx_llamar_telefono" android:title="@string/llamar_telefono_item" android:titleCondensed="eliminar"></item>
-	<item android:id="@+id/ctx_llamar_movil" android:title="@string/llamar_movil_item" android:titleCondensed="eliminar"></item>
-    <item android:id="@+id/ctx_eliminar" android:title="@string/eliminar_item" android:titleCondensed="eliminar"></item>
-    
-
-</menu>
