@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="datos">
+      <item>Nombre</item>
+      <item>Apellidos</item>
+   </string-array>
+</resources>

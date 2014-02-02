@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">Bases de Datos</string>
+    <string name="listado_alumnos_title">Listado</string>
+    <string name="nuevo_alumno_title">Altas</string>
+    
+    <string name="menu_settings">Opciones</string>
+    
+    <string name="aceptar_message">Aceptar</string>
+    <string name="cancelar_message">Cancelar</string>
+    <string name="empty_message">Sin datos</string>
+    <string name="confirma_alta_message">Alumno registrado</string>
+
+    <string name="lbnombre_label">Nombre</string>
+    <string name="lbasignatura_label">Asignatura</string>
+    <string name="btalta_label">Alta</string>
+</resources>

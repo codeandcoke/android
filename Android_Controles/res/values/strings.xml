@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Android_Controles</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="buttonText">Ok</string>
+    <string name="checkBoxText">Limpiar Texto</string>
+    <string name="toggleButtonText">Interruptor</string>
+    <string name="radioButton1Text">Primera Opción</string>
+    <string name="radioButton2Text">Segunda Opción</string>
+    <string name="radioButton3Text">Tercera Opción</string>
+    <string name="checkedTextViewText">Texto chequeable</string>
+
+</resources>

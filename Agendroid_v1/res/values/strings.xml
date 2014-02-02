@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Agenda</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_nuevo_contacto">Nuevo Contacto</string>
+    <string name="menu_nuevo_contacto_label">Nuevo Contacto</string>
+    
+    <string name="nombre_label">Nombre</string>
+    <string name="apellidos_label">Apellidos</string>
+    <string name="telefono_label">Teléfono</string>
+    <string name="movil_label">Móvil</string>
+    <string name="fax_label">Fax</string>
+    <string name="favorito_label">Favorito</string>
+    <string name="btaceptar_label">Aceptar</string>
+    <string name="btcancelar_label">Cerrar</string>
+    
+    <string name="nuevo_contacto">Contacto Añadido</string>
+    
+    <string name="btimagen_label">Imagen</string>
+    
+    <string name="tvsindatos_label">No hay contactos</string>
+
+</resources>

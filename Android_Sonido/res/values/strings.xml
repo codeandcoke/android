@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">Android_Sonido</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_sonido">Sonido</string>
+    <string name="btplay_label">Play</string>
+    <string name="btstop_label">Stop</string>
+
+</resources>

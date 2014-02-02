@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/menu_nuevo_contacto" android:title="@string/menu_nuevo_contacto_label"></item>
+
+</menu>
