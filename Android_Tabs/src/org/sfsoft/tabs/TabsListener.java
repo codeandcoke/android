@@ -17,11 +17,11 @@ import android.app.FragmentTransaction;
  */
 public class TabsListener implements ActionBar.TabListener {
 	 
-    private Fragment fragmento;
+    private Fragment fragment;
  
-    public TabsListener(Fragment fragmento)
+    public TabsListener(Fragment fragment)
     {
-        this.fragmento = fragmento;
+        this.fragment = fragment;
     }
 
     /**
@@ -37,7 +37,7 @@ public class TabsListener implements ActionBar.TabListener {
 	 */
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		
-		ft.replace(R.id.contenedor, fragmento);
+		ft.replace(R.id.container, fragment);
 	}
 
 	/**
@@ -45,8 +45,6 @@ public class TabsListener implements ActionBar.TabListener {
 	 */
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		
-		ft.remove(fragmento);
+		ft.remove(fragment);
 	}
- 
-   
 }

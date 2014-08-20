@@ -5,17 +5,17 @@
     android:orientation="horizontal" >
     
     <TextView
-        android:id="@+id/asignaturaAlumno"
+        android:id="@+id/studentSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/nombreAlumno"
+        android:layout_alignBottom="@+id/studentName"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/nombreAlumno"
+        android:layout_toRightOf="@+id/studentName"
         android:textAppearance="?android:attr/textAppearanceMedium" />
     
     <TextView
-        android:id="@+id/nombreAlumno"
+        android:id="@+id/studentName"
         android:layout_width="150dip"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

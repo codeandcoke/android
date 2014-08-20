@@ -21,20 +21,20 @@ import android.os.Bundle;
  * @author Santiago Faci
  * @version curso 2014-2015
  */
-public class GestionAlumnos extends Activity {
+public class StudentsManagement extends Activity {
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        cargaPestanas();
+        loadTabs();
     }
     
     /*
      * Carga las pestañas para formar el TabHost
      */
-    private void cargaPestanas() {
+    private void loadTabs() {
     	
     	Resources res = getResources();
         
@@ -42,16 +42,16 @@ public class GestionAlumnos extends Activity {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         
         // Crea las tabs
-        ActionBar.Tab tab1 = actionBar.newTab().setText(res.getString(R.string.nuevo_alumno_title));
-        ActionBar.Tab tab2 = actionBar.newTab().setText(res.getString(R.string.listado_alumnos_title));
+        ActionBar.Tab tab1 = actionBar.newTab().setText(res.getString(R.string.new_student_title));
+        ActionBar.Tab tab2 = actionBar.newTab().setText(res.getString(R.string.students_list_title));
         
         // Crea cada Fragment para luego asociarla con la pestaña que corresponda
-        Fragment fragmentoTab1 = new NuevoAlumno();
-        Fragment fragmentoTab2 = new ListaAlumnos();
+        Fragment tabFragment1 = new StudentRegistration();
+        Fragment tabFragment2 = new StudentsList();
         
         // Asocia cada Fragment con su tab
-        tab1.setTabListener(new TabsListener(fragmentoTab1));
-        tab2.setTabListener(new TabsListener(fragmentoTab2));
+        tab1.setTabListener(new TabsListener(tabFragment1));
+        tab2.setTabListener(new TabsListener(tabFragment2));
         
         // Añade las tabs a la ActionBar
         actionBar.addTab(tab1);

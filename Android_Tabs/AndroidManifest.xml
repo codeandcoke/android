@@ -12,15 +12,15 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="org.sfsoft.tabs.ListaAlumnos"
-            android:label="@string/listado_alumnos_title" >
+            android:name="org.sfsoft.tabs.StudentsList"
+            android:label="@string/students_list_title" >
         </activity>
         <activity
-            android:name="org.sfsoft.tabs.NuevoAlumno"
-            android:label="@string/nuevo_alumno_title" >
+            android:name="org.sfsoft.tabs.StudentRegistration"
+            android:label="@string/new_student_title" >
         </activity>
         <activity
-            android:name="org.sfsoft.tabs.GestionAlumnos"
+            android:name="org.sfsoft.tabs.StudentsManagement"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
