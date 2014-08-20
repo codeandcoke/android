@@ -18,7 +18,7 @@ import org.json.JSONObject;
 import org.sfsoft.guiarestaurantes.adapters.RestauranteAdapter;
 import org.sfsoft.guiarestaurantes.base.Restaurante;
 
-import com.google.android.gms.common.GooglePlayServicesUtil;
+//import com.google.android.gms.common.GooglePlayServicesUtil;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -34,7 +34,7 @@ import android.widget.Toast;
  * Aplicación que lista los restaurantes que el ayuntamiento proporciona
  * a través de su sistema de datos abiertos y los ubica en un mapa de Google
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ListadoRestaurantes extends Activity implements OnItemClickListener {
 

@@ -22,7 +22,7 @@ import android.widget.Toast;
 /**
  * Activity donde el usuario da de alta un Contacto en la Agenda
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class NuevoContacto extends Activity implements OnClickListener {
 
@@ -42,9 +42,9 @@ public class NuevoContacto extends Activity implements OnClickListener {
     }
     
     /**
-     * MÈtodo que se ejecutar· cuando se invoque StartActivityForResult sobre esta
+     * M√©todo que se ejecutar√° cuando se invoque StartActivityForResult sobre esta
      * Activity.
-     * Carga la imagen seleccionada de la galerÌa de im·genes y la muestra en el ImageView
+     * Carga la imagen seleccionada de la galer√≠a de im√°genes y la muestra en el ImageView
      */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -54,7 +54,7 @@ public class NuevoContacto extends Activity implements OnClickListener {
 			Uri imagenSeleccionada = data.getData();
 			String[] ruta = {MediaStore.Images.Media.DATA };
 			
-			// Realiza una consulta a la galerÌa de im·genes solicitando la imagen seleccionada
+			// Realiza una consulta a la galer√≠a de im√°genes solicitando la imagen seleccionada
 			Cursor cursor = getContentResolver().query(imagenSeleccionada, ruta, null, null, null);
             cursor.moveToFirst();
  
@@ -63,14 +63,14 @@ public class NuevoContacto extends Activity implements OnClickListener {
             String picturePath = cursor.getString(indice);
             cursor.close();
              
-            // Carga la imagen en la vista ImageView que hay encima del botÛn
+            // Carga la imagen en la vista ImageView que hay encima del bot√≥n
             ImageView imageView = (ImageView) findViewById(R.id.ivImagenContacto);
             imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 		}
 	}
 
 	/**
-	 * MÈtodo que atiende los clicks de los botones Aceptar, Cerrar e Imagen
+	 * M√©todo que atiende los clicks de los botones Aceptar, Cerrar e Imagen
 	 */
 	@Override
 	public void onClick(View v) {
@@ -78,8 +78,8 @@ public class NuevoContacto extends Activity implements OnClickListener {
 		switch (v.getId()) {
 			/*
 			 * Si el usuario pulsa en Aceptar, se recogen los datos, se crea un contacto
-			 * y se aÒade a la lista de contactos.
-			 * TambiÈn se muestra un mensaje al usuario y se limpian las vistas
+			 * y se a√±ade a la lista de contactos.
+			 * Tambi√©n se muestra un mensaje al usuario y se limpian las vistas
 			 */
 			case R.id.btAceptar:
 				
@@ -105,8 +105,8 @@ public class NuevoContacto extends Activity implements OnClickListener {
 				Toast.makeText(getApplicationContext(), getResources().getString(R.string.nuevo_contacto), Toast.LENGTH_SHORT).show();
 				break;
 			/*
-			 * Si el usuario pulsa en el botÛn Cerrar, finalizamos la Activity
-			 * o bien podemos 'volver atr·s' (est· comentado)
+			 * Si el usuario pulsa en el bot√≥n Cerrar, finalizamos la Activity
+			 * o bien podemos 'volver atr√°s' (est√° comentado)
 			 */
 			case R.id.btCancelar:
 				
@@ -114,7 +114,7 @@ public class NuevoContacto extends Activity implements OnClickListener {
 				//onBackPressed();
 				break;
 			/*
-			 * Si el usuario pulsa en el botÛn Imagen mostramos la galerÌa de im·genes del mÛvil
+			 * Si el usuario pulsa en el bot√≥n Imagen mostramos la galer√≠a de im√°genes del m√≥vil
 			 * para que escoja una imagen que luego visualizaremos y asignaremos al contacto
 			 */
 			case R.id.btImagen:

@@ -3,7 +3,7 @@ package org.sfsoft.tabs.base;
 /**
  * Clase que representa un alumno
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class Alumno {
 	

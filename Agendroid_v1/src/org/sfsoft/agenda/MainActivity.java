@@ -23,7 +23,7 @@ import android.widget.Toast;
 /**
  * Activity principal donde se listan los contactos de la Agenda
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements OnCreateContextMenuListener {
 
@@ -56,10 +56,10 @@ public class MainActivity extends Activity implements OnCreateContextMenuListene
 	}
 
 	/*
-	 * Esté método lo invoca Android antes de que la Activity termine 
+	 * Lo invoca Android antes de que la Activity termine
 	 * para almacenar su estado.
 	 * En este caso se aprovecha para almacenar la lista de contactos, de forma
-	 * que luego podamos recuperarla en el método onCreate()
+	 * que luego podamos recuperarla en el mÃ©todo onCreate()
 	 */
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
@@ -80,7 +80,7 @@ public class MainActivity extends Activity implements OnCreateContextMenuListene
 	}
 	
 	/*
-	 * Método que carga un menú contextual en pantalla
+	 * Carga un menÃº contextual en pantalla
 	 */
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
@@ -91,13 +91,13 @@ public class MainActivity extends Activity implements OnCreateContextMenuListene
 	}
 	
 	/*
-	 * Método invocado cuando se selecciona un elemento del menú contextual
+	 * Se invoca cuando se selecciona un elemento del menÃº contextual
 	 */
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		
 		/*
-		 *  Contiene información sobre el elemento del menú contextual
+		 *  Contiene informaciÃ³n sobre el elemento del menÃº contextual
 		 *  sobre el que se ha pulsado
 		 */
 		AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
@@ -122,7 +122,7 @@ public class MainActivity extends Activity implements OnCreateContextMenuListene
 	}
 
 	/*
-	 * Método que muestra el menú de opciones de esta Activity
+	 * MÃ©todo que muestra el menÃº de opciones de esta Activity
 	 */
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -132,16 +132,16 @@ public class MainActivity extends Activity implements OnCreateContextMenuListene
 	}
 	
 	/*
-	 * Método que se ejecuta cuando el usuario selecciona una opción
-	 * del menú de opciones.
-	 * Hay que evaluar que opción ha pulsado y hacer lo que convenga
+	 * MÃ©todo que se ejecuta cuando el usuario selecciona una opciÃ³n
+	 * del menÃº de opciones.
+	 * Hay que evaluar que opciÃ³n ha pulsado y hacer lo que convenga
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		
 		switch (item.getItemId()) {
 		
-			// Sólo hay una opción, la de lanzar la Activity de dar de alta un contacto
+			// SÃ³lo hay una opciÃ³n, la de lanzar la Activity de dar de alta un contacto
 			case R.id.menu_nuevo_contacto:
 				
 				Intent intent = new Intent(this, NuevoContacto.class);

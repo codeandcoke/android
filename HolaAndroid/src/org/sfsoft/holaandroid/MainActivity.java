@@ -13,6 +13,7 @@ import android.widget.TextView;
  * Activity principal
  * En el método onCreate es donde se fija el layout de esta Activity
  * @author Santiago Faci
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity {
 

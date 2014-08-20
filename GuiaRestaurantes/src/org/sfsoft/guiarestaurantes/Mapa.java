@@ -19,7 +19,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * Activity donde se muestra el mapa
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
+ * TODO Comprobar en la tablet el proyecto de IntelliJ
  */
 public class Mapa extends FragmentActivity {
 
@@ -47,11 +48,11 @@ public class Mapa extends FragmentActivity {
         this.nombre = nombre;
         
         // Inicializa el sistema de mapas de Google
-        try {
+        //try {
             MapsInitializer.initialize(this);
-        } catch (GooglePlayServicesNotAvailableException e) {
+        /*} catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
-        }
+        }*/
         
         // Obtiene una referencia al objeto que permite "manejar" el mapa
         mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
@@ -68,19 +69,19 @@ public class Mapa extends FragmentActivity {
      * Marca el restaurante elegido en el mapa
      */
     private void ubicarRestaurante() {
-    	
-    	// Obtiene una vista de cámara
+
+    	// Obtiene una vista de cÃ¡mara
     	CameraUpdate camara =
     			CameraUpdateFactory.newLatLng(new LatLng(latitud, longitud));
         	 
-    	// Coloca la vista del mapa sobre la posición del restaurante 
+    	// Coloca la vista del mapa sobre la posiciï¿½n del restaurante 
     	// y activa el zoom para verlo de cerca
     	mapa.moveCamera(camara);
     	mapa.animateCamera(CameraUpdateFactory.zoomTo(17.0f)); 
         	
         Toast.makeText(this, latitud + ":" + longitud, Toast.LENGTH_SHORT).show();
     	
-        // Añade una marca en la posición del restaurante con el nombre de éste
+        // Aï¿½ade una marca en la posiciï¿½n del restaurante con el nombre de ï¿½ste
     	mapa.addMarker(new MarkerOptions()
     		.position(new LatLng(latitud, longitud))
     		.title(nombre));

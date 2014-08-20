@@ -20,7 +20,7 @@ import android.widget.ToggleButton;
  * Clase que muestra algunos de los principales controles
  * para el diseño de interfaces de usuario
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity {
 

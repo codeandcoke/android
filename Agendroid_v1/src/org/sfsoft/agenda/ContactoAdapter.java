@@ -1,16 +1,13 @@
 package org.sfsoft.agenda;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import org.sfsoft.agenda.base.Contacto;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +16,7 @@ import android.widget.TextView;
  * Adaptador para representar cada uno de los contactos en la lista
  * de la Activity principal
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ContactoAdapter extends BaseAdapter {
 
@@ -41,7 +38,7 @@ public class ContactoAdapter extends BaseAdapter {
 	}
 
 	/*
-	 * Se ha empleado el patrÛn Holder para mejorar el rendimiento de la ListView
+	 * Se ha empleado el patr√≥n Holder para mejorar el rendimiento de la ListView
 	 * http://developer.android.com/training/improving-layouts/smooth-scrolling.html
 	 */
 	@Override
@@ -62,7 +59,7 @@ public class ContactoAdapter extends BaseAdapter {
 			convertView.setTag(holder);
 		}
 		/*
-		 *  En caso de que la View no sea null se reutilizar· con los
+		 *  En caso de que la View no sea null se reutilizar√° con los
 		 *  nuevos valores
 		 */
 		else {

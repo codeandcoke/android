@@ -14,7 +14,7 @@ import android.app.FragmentTransaction;
  * pestañas de la aplicación
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class TabsListener implements ActionBar.TabListener {
 	 

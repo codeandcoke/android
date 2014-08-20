@@ -7,8 +7,7 @@ import android.preference.PreferenceActivity;
  * PreferenceActivity es la pantalla donde el usuario personaliza
  * las preferencias de la aplicación
  * @author Santiago Faci
- * @version 1.0
- *
+ * @version curso 2014-2015
  */
 public class Preferencias extends PreferenceActivity {
     @Override

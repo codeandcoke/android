@@ -1,7 +1,5 @@
 package org.sfsoft.agenda;
 
-import org.sfsoft.agenda.base.Contacto;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,19 +10,14 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.*;
+import org.sfsoft.agenda.base.Contacto;
 
 /**
  * Activity donde el usuario da de alta un Contacto en la Agenda
  * 
  * @author Santiago Faci
- * @version 2.0
- * @since 1.0
- *
+ * @version curso 2014-2015
  */
 public class NuevoContacto extends Activity implements OnClickListener {
 

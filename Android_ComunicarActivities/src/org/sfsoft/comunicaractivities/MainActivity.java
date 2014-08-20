@@ -15,7 +15,7 @@ import android.widget.EditText;
  * otra activity
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements OnClickListener {
 

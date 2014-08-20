@@ -15,7 +15,7 @@ import android.widget.TextView;
 /**
  * Activity que muestra el uso de una caja de texto autocompletable
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements TextWatcher {
 

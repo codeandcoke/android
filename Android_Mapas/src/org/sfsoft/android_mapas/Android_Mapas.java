@@ -47,15 +47,15 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 /**
- * - Aplicaci髇 que muestra en un Mapa la localizaci髇 de una serie de lugares
- * - Se ha utilizado la librer韆 jcoord para convertir las coordenadas de UTM a Latitud-Longitud
+ * - Aplicaci贸n que muestra en un Mapa la localizaci贸n de una serie de lugares
+ * - Se ha utilizado la librer铆a jcoord para convertir las coordenadas de UTM a Latitud-Longitud
  * 		Hay que tener cuidado porque utiliza una clase LatLng que coincide en nombre con la que se usa
  * 		en la API de Google Maps para ubicar las posiciones
  * 
- * - El destino del proyecto debe ser un m髒il con Google API como sistema
+ * - El destino del proyecto debe ser un m贸vil con Google API como sistema
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class Android_Mapas extends FragmentActivity implements OnClickListener {
 	
@@ -87,11 +87,11 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
         btLimpiar.setOnClickListener(this);
         
         // Inicializa el sistema de mapas de Google
-        try {
+        //try {
             MapsInitializer.initialize(this);
-        } catch (GooglePlayServicesNotAvailableException e) {
+        /*} catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
-        }
+        }*/
         
         // Obtiene una referencia al objeto que permite "manejar" el mapa
         mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
@@ -126,7 +126,7 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
 	}
 	
 	/*
-	 * Localiza una gasolinera en el mapa haciendo una marca en su posici髇
+	 * Localiza una gasolinera en el mapa haciendo una marca en su posici贸n
 	 */
 	private void localizarGasolinera() {
 		
@@ -136,7 +136,7 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
 		
 		Gasolinera gasolinera = listaGasolineras.get(spGasolineras.getSelectedItemPosition());
 		
-		// Prepara y a馻de una nueva marca al mapa
+		// Prepara y a帽ade una nueva marca al mapa
 		mapa.addMarker(new MarkerOptions()
 			.position(gasolinera.getPosicion())
 			.title(gasolinera.getNombre()));
@@ -145,7 +145,7 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
     	CameraUpdate camara =
     			CameraUpdateFactory.newLatLng(gasolinera.getPosicion());
         	 
-    	// Coloca la vista del mapa sobre la posici髇 del restaurante 
+    	// Coloca la vista del mapa sobre la posici贸n del restaurante
     	// y activa el zoom para verlo de cerca
     	mapa.moveCamera(camara);
     	mapa.animateCamera(CameraUpdateFactory.zoomTo(12.0f)); 
@@ -163,7 +163,7 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
 
     	private boolean error = false;
     	
-    	// Este m閠odo no puede acceder a la interfaz
+    	// Este m茅todo no puede acceder a la interfaz, puesto que se ejecuta en segundo plano
 		@Override
 		protected Void doInBackground(String... urls) {
 			
@@ -204,7 +204,7 @@ public class Android_Mapas extends FragmentActivity implements OnClickListener {
 		    		gasolinera = new Gasolinera();
 		    		// Nombre de la gasolinera
 		    		gasolinera.setNombre(jsonArray.getJSONObject(i).getJSONObject("properties").getString("title"));
-		    		// Posici髇 de la gasolinera
+		    		// Posici锟絥 de la gasolinera
 		    		localizacion = jsonArray.getJSONObject(i).getJSONObject("geometry").getString("coordinates");
 		    		gasolinera.setPosicion(Util.parseCoordenadas(localizacion));
 		    		

@@ -10,7 +10,7 @@ import android.widget.ImageView;
  * Clase que extiende un ArrayAdapter para convertirlo en un Adapter personalizado
  * para pintar elementos "customizados" en un ListView
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ImagenAdapter extends ArrayAdapter<String> {
 	

@@ -15,7 +15,7 @@ import android.widget.ListView;
  * En este caso es la lista donde se muestran los alumnos
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ListaAlumnos extends Fragment {
 

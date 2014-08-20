@@ -14,7 +14,7 @@ import static org.sfsoft.bbdd.database.Constantes.TABLA_ALUMNOS;
 /**
  * Clase a través de la cual se gestiona la Base de Datos
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class BaseDatos extends SQLiteOpenHelper {
 

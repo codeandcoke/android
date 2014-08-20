@@ -27,7 +27,7 @@ import android.widget.TabHost.TabSpec;
  *  - Soporte multilenguaje
  *  
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class GestionAlumnos extends Activity implements OnClickListener, OnTabChangeListener {
 

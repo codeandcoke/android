@@ -8,9 +8,7 @@ import android.os.Parcelable;
  * Clase que representa un contacto de la Agenda
  * 
  * @author Santiago Faci
- * @version 2.0
- * @since 1.0
- *
+ * @version curso 2014-2015
  */
 public class Contacto implements Parcelable {
 
@@ -96,7 +94,7 @@ public class Contacto implements Parcelable {
 	}
 
 	/**
-	 * M�todo que ser� invocado cuando haya que almacenar los datos por el
+	 * Método que será invocado cuando haya que almacenar los datos por el
 	 * interfaz Parcelable
 	 */
 	@Override
@@ -123,7 +121,7 @@ public class Contacto implements Parcelable {
 		telefono = entrada.readString();
 		movil = entrada.readString();
 		fax = entrada.readString();
-		imagen = (Bitmap) entrada.readParcelable(Bitmap.class.getClassLoader());
+		imagen = entrada.readParcelable(Bitmap.class.getClassLoader());
 		favorito = Boolean.parseBoolean(entrada.readString());
 	}
 }

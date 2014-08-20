@@ -21,7 +21,7 @@ import android.widget.Toast;
  * 'getActivity()' que devuelve la Activity a la que pertenece el Fragment
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class NuevoAlumno extends Fragment implements OnClickListener {
 

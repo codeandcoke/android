@@ -1,9 +1,7 @@
 package org.sfsoft.android_listas;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.app.ListActivity;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -13,7 +11,7 @@ import android.widget.TextView;
  * Activity de tipo Lista que lista una serie de elementos
  * Al pinchar en uno de ellos se muestra en una caja de texto
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends ListActivity {
 

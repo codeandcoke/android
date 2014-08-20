@@ -19,7 +19,7 @@ import android.widget.Toast;
  * Activity que muestra como realizar cambios en una ListView
  * En este caso se ha diseñado el layout para cada fila
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements OnItemLongClickListener, OnItemClickListener {
 

@@ -4,6 +4,11 @@ import com.google.android.gms.maps.model.LatLng;
 
 import uk.me.jstott.jcoord.UTMRef;
 
+/**
+ * MÃ©todos de utilidad para el proyecto
+ * @author Santiago Faci
+ * @version curso 2014-2015
+ */
 public class Util {
 	
 	public static uk.me.jstott.jcoord.LatLng DeUMTSaLatLng(double este, double oeste, char zonaLat, int zonaLong) {
@@ -15,7 +20,7 @@ public class Util {
 	
 	/**
 	 * Convierte las coordenadas tal y como vienen en el JSON en coordenadas 
-	 * según el formato de Google Maps (LatLng)
+	 * segÃºn el formato de Google Maps (LatLng)
 	 * @param localizacion
 	 * @return Un objeto LatLng de Google Maps con las coordenadas 'en bruto' del JSON. En caso de error devuelve null
 	 */
@@ -29,7 +34,7 @@ public class Util {
 		localizacion = localizacion.substring(1, localizacion.length() - 1);
 		String coordenadas[] = localizacion.split(",");
 		
-		// Convierte las coordenadas de UTM a Latitud y Longitud de la librería jcoord
+		// Convierte las coordenadas de UTM a Latitud y Longitud de la librerÃ­a jcoord
 		uk.me.jstott.jcoord.LatLng ubicacion = Util.DeUMTSaLatLng(Double.parseDouble(coordenadas[0]), 
 				Double.parseDouble(coordenadas[1]), 'N', 30);
 		

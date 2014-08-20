@@ -5,9 +5,9 @@ import com.google.android.gms.maps.model.LatLng;
 import android.provider.BaseColumns;
 
 /**
- * Clase con las constantes usadas en la aplicaci�n
+ * Clase con las constantes usadas en la aplicación
  * @author Santiago Faci
- *
+ * @version 2014-2015
  */
 public interface Constantes extends BaseColumns {
 	

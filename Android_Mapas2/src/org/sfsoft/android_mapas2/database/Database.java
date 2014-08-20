@@ -18,7 +18,7 @@ import static org.sfsoft.android_mapas2.util.Constantes.LONGITUD;
 /**
  * Clase a través de la cual se gestiona la Base de Datos
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class Database extends SQLiteOpenHelper {
 

@@ -13,10 +13,13 @@ import android.os.Bundle;
  * la ActionBar con las pestañas
  * 
  * Desde esta Activity se cargan las pestañas. La funcionalidad de cada una de ellas
- * se hará en su correspondiente fichero de código 
+ * se hará en su correspondiente fichero de código
+ *
+ * En esta aplicación se muestra cómo trabajar con Bases de Datos en Android con SQLite
+ * y cómo presentar la información utilizando Tabs
  *  
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class GestionAlumnos extends Activity {
 	

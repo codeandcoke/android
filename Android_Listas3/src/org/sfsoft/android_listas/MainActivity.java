@@ -12,7 +12,7 @@ import android.widget.TextView;
 /**
  * Activity que muestra una serie de elementos en un control Spinner
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements OnItemSelectedListener {
 

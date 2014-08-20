@@ -39,12 +39,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * Fragment de la aplicaci�n que se corresponder�
- * con una de las pesta�as de la aplicaci�n
+ * Fragment de la aplicació que se corresponderá
+ * con una de las pestañas de la aplicación
  * En este caso es la lista donde se muestran los alumnos
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ListaGasolineras extends Fragment implements OnItemClickListener {
 
@@ -73,7 +73,11 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 		
 		return view;
 	}
-	
+
+    /**
+     * Carga la lista de datos de gasolineras en segundo plano utilizando un
+     * objeto AsyncTask que se define más abajo
+     */
 	private void cargarListaGasolineras() {
 		
 		TareaDescargaDatos tarea = new TareaDescargaDatos();
@@ -84,7 +88,7 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 
     	private boolean error = false;
     	
-    	// Este m�todo no puede acceder a la interfaz
+    	// Este método no puede acceder a la interfaz, puesto que se ejecuta en segundo plano
 		@Override
 		protected Void doInBackground(String... urls) {
 			

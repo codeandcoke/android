@@ -12,14 +12,18 @@ import android.view.MenuItem;
 import org.sfsoft.android_mapas2.R;
 
 /**
- * Activity principal donde se mostrar� la aplicaci�n y se presentar�
- * la ActionBar con las pesta�as
+ * En esta aplicación se listan una serie de gasolineras cuya información se ha leído de un fichero
+ * JSON en Internet
+ * Además, permite que el usuario registre ubicaciones propias de otros lugares en una base de datos
+ *
+ * Activity principal donde se mostrará la aplicación y se presentará
+ * la ActionBar con las pestañas
  * 
- * Desde esta Activity se cargan las pesta�as. La funcionalidad de cada una de ellas
- * se har� en su correspondiente fichero de c�digo 
+ * Desde esta Activity se cargan las pestañas. La funcionalidad de cada una de ellas
+ * se hará en su correspondiente fichero de código
  *  
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class ActivityMain extends Activity {
 	
@@ -32,7 +36,7 @@ public class ActivityMain extends Activity {
     }
     
     /*
-     * Carga las pestañas para formar el TabHost
+     * Carga las pestañas
      */
     private void cargaPestanas() {
     	

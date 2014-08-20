@@ -45,11 +45,11 @@ import android.widget.Toast;
  * En este caso la carga de datos se realiza como una tarea en segundo plano
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class AndroidWS extends Activity implements OnClickListener, LocationListener {
 
-	// URL donde se encuentra el fichero JSON con toda la informaci�n
+	// URL donde se encuentra el fichero JSON con toda la información
 	private static final String URL = "http://www.zaragoza.es/georref/json/hilo/estacionesDeServicio_Equipamiento";
 	
 	private Button btCargar;
@@ -116,7 +116,7 @@ public class AndroidWS extends Activity implements OnClickListener, LocationList
      *   cancelado la tarea
      * 
      * @author Santiago Faci
-     *
+     * @version curso 2014-2015
      */
     private class TareaDescargaDatos extends AsyncTask<String, Void, Void> {
 

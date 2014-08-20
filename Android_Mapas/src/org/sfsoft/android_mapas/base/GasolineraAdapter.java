@@ -17,7 +17,7 @@ import android.widget.TextView;
 /**
  * Adapter para listar los restaurantes en la pantalla
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class GasolineraAdapter extends ArrayAdapter<Gasolinera> {
 	

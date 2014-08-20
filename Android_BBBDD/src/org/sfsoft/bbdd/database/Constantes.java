@@ -5,7 +5,7 @@ import android.provider.BaseColumns;
 /**
  * Clase con las constantes usadas en la aplicación
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public interface Constantes extends BaseColumns {
 	

@@ -1,31 +1,25 @@
 package org.sfsoft.agenda;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.sfsoft.agenda.base.Contacto;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import org.sfsoft.agenda.base.Contacto;
+
+import java.util.ArrayList;
 
 /**
  * Adaptador para representar cada uno de los contactos en la lista
  * de la Activity principal
  * 
  * @author Santiago Faci
- * @version 2.0
- * @since 1.0
- *
+ * @version curso 2014-2015
  */
 public class ContactoAdapter extends BaseAdapter {
 

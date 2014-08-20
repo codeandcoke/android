@@ -3,7 +3,7 @@ package org.sfsoft.guiarestaurantes.base;
 /**
  * Clase que representa a cada uno de los restaurantes
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class Restaurante {
 

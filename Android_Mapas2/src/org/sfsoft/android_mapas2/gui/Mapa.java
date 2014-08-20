@@ -43,7 +43,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
  * Activity que representa el mapa de la aplicación
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 
 public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerClickListener, 
@@ -72,11 +72,11 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
 		btDistancia.setOnClickListener(this);
 		
 		// Inicializa el sistema de mapas de Google
-        try {
+        //try {
             MapsInitializer.initialize(this);
-        } catch (GooglePlayServicesNotAvailableException e) {
+        /*} catch (GooglePlayServicesNotAvailableException e) {
             e.printStackTrace();
-        }
+        }*/
         
         // Obtiene una referencia al objeto que permite "manejar" el mapa
         mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();

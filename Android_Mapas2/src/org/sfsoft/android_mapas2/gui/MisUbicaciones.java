@@ -25,14 +25,14 @@ import android.widget.Toast;
 /**
  * Fragment de la aplicación que se corresponderá
  * con una de las pestañas de la aplicación
- * En este caso es el formulario donde se registran los alumnos
+ * En este caso es el formulario donde se registran las ubicaciones
  * 
  * Al tratarse de un Fragment y no una Activity hay que tener en cuenta
  * que para obtener el contexto de la aplicación hay que invocar al método
  * 'getActivity()' que devuelve la Activity a la que pertenece el Fragment
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MisUbicaciones extends Fragment {
 

@@ -10,7 +10,7 @@ import android.widget.TextView;
  * que ha lanzado su ejecución
  * 
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class LeerMensaje extends Activity {
 

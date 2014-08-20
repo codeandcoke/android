@@ -13,7 +13,7 @@ import android.widget.TextView;
  * En este caso se ha diseñado el layout para cada fila y además éste puede cambiar
  * en tiempo de ejecución
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity {
 

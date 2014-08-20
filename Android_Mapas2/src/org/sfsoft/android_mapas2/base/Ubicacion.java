@@ -1,12 +1,15 @@
 package org.sfsoft.android_mapas2.base;
 
-import java.io.Serializable;
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.google.android.gms.maps.model.LatLng;
 
+/**
+ * Guarda información sobre las ubicaciones que guarda el usuario en el mapa
+ * @author Santiago Faci
+ * @version curso 2014-2015
+ */
 public class Ubicacion implements Parcelable {
 
 	private String nombre;

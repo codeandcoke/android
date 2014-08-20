@@ -1,9 +1,5 @@
 package org.sfsoft.agenda;
 
-import java.util.ArrayList;
-
-import org.sfsoft.agenda.base.Contacto;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -20,7 +16,9 @@ import android.view.View;
 import android.view.View.OnCreateContextMenuListener;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ListView;
-import android.widget.Toast;
+import org.sfsoft.agenda.base.Contacto;
+
+import java.util.ArrayList;
 
 /**
  * Agenda Personal para Android 'Agendroid' v2.0
@@ -61,9 +59,7 @@ import android.widget.Toast;
  * Activity principal donde se listan los contactos de la Agenda
  * 
  * @author Santiago Faci
- * @version 2.0
- * @since 1.0
- *
+ * @version curso 2014-2015
  */
 public class MainActivity extends Activity implements OnCreateContextMenuListener {
 

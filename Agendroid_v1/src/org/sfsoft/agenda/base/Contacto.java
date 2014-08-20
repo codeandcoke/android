@@ -7,7 +7,7 @@ import android.os.Parcelable;
 /**
  * Clase que representa un contacto de la Agenda
  * @author Santiago Faci
- *
+ * @version curso 2014-2015
  */
 public class Contacto implements Parcelable {
 
@@ -93,7 +93,7 @@ public class Contacto implements Parcelable {
 	}
 
 	/**
-	 * MÈtodo que ser· invocado cuando haya que almacenar los datos por el
+	 * M√©todo que ser√° invocado cuando haya que almacenar los datos por el
 	 * interfaz Parcelable
 	 */
 	@Override

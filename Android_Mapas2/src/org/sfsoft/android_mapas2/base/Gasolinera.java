@@ -1,12 +1,15 @@
 package org.sfsoft.android_mapas2.base;
 
-import java.io.Serializable;
-
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import com.google.android.gms.maps.model.LatLng;
 
+/**
+ * Representa a las gasolineras del mapa
+ * @author Santiago Faci
+ * @version curso 2014-2015
+ */
 public class Gasolinera implements Parcelable {
 
 	private String nombre;

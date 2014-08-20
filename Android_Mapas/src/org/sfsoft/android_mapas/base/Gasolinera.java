@@ -2,6 +2,11 @@ package org.sfsoft.android_mapas.base;
 
 import com.google.android.gms.maps.model.LatLng;
 
+/**
+ * Representa una Gasolinera del mapa
+ * @author Santiago Faci
+ * @version curso 2014-2015
+ */
 public class Gasolinera {
 
 	private String nombre;
