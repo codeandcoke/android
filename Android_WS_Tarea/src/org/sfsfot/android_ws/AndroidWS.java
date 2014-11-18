@@ -109,7 +109,7 @@ public class AndroidWS extends Activity implements OnClickListener, LocationList
     
     /**
      * Clase privada que define la tarea que descarga y pinta los datos
-     * @see android.os.AsyncTask<Params, Progress, Result>
+     *
      * - Es posible invocar a publishPogress() para notificar el avance de la tarea, lo que
      *   hace invocar al método onProgressUpdate
      * - También es posible llamar al método isCancelled() para comprobar si se ha
@@ -183,7 +183,7 @@ public class AndroidWS extends Activity implements OnClickListener, LocationList
 		protected void onCancelled() {
 			super.onCancelled();
 			adaptador.clear();
-			listaDatos = new ArrayList<String>();
+			listaDatos = new ArrayList<>();
 		}
 		
 		@Override
