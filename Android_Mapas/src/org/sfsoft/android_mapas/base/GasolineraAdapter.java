@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.sfsoft.android_mapas.R;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
@@ -46,20 +45,20 @@ public class GasolineraAdapter extends ArrayAdapter<Gasolinera> {
 	public View getFila(int posicion, View view, ViewGroup padre) {
 		
 		View fila = view;
-		ItemRestaurante item = null;
+		ItemGasolinera item = null;
 		
 		if (fila == null) {
 			LayoutInflater inflater = ((FragmentActivity) contexto).getLayoutInflater();
 			fila = inflater.inflate(layoutId, padre, false);
 			
-			item = new ItemRestaurante();
+			item = new ItemGasolinera();
 			item.imagen = (ImageView) fila.findViewById(R.id.imagen);
 			item.nombre = (TextView) fila.findViewById(R.id.nombre);
 			
 			fila.setTag(item);
 		}
 		else {
-			item = (ItemRestaurante) fila.getTag();
+			item = (ItemGasolinera) fila.getTag();
 		}
 		
 		Gasolinera gasolinera = datos.get(posicion);
@@ -69,7 +68,7 @@ public class GasolineraAdapter extends ArrayAdapter<Gasolinera> {
 		return fila;
 	}
 	
-	static class ItemRestaurante {
+	static class ItemGasolinera {
 		
 		ImageView imagen;
 		TextView nombre;
