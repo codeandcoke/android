@@ -43,7 +43,7 @@ public class Database extends SQLiteOpenHelper {
 		db.execSQL("CREATE TABLE " + TABLA + "(" 
 				+ _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NOMBRE
 				+ " TEXT NOT NULL, " + LATITUD + " REAL DEFAULT 0," +
-				" LONGITUD REAL DEFAULT 0)");
+				LONGITUD + " REAL DEFAULT 0)");
 	}
 	
 	/**
@@ -69,6 +69,31 @@ public class Database extends SQLiteOpenHelper {
     	valores.put(LATITUD, ubicacion.getPosicion().latitude);
     	valores.put(LONGITUD, ubicacion.getPosicion().longitude);
     	db.insertOrThrow(TABLA, null, valores);
+    }
+
+    /**
+     * Modifica una Ubicación en la base de datos
+     * @param ubicacion
+     */
+    public void modificarUbicacion(Ubicacion ubicacion) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues valores = new ContentValues();
+        valores.put(NOMBRE, ubicacion.getNombre());
+        valores.put(LATITUD, ubicacion.getPosicion().latitude);
+        valores.put(LONGITUD, ubicacion.getPosicion().longitude);
+        db.update(TABLA, valores, _ID + " = " + ubicacion.getId(), null);
+    }
+
+    /**
+     * Elimina una Ubicación de la base de datos
+     * @param ubicacion
+     */
+    public void eliminarUbicacion(Ubicacion ubicacion) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLA, _ID + " = " + ubicacion.getId(), null);
     }
     
 	/**

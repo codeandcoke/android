@@ -2,21 +2,16 @@ package org.sfsoft.android_mapas2.gui;
 
 import java.util.ArrayList;
 
+import android.app.Activity;
 import org.sfsoft.android_mapas2.R;
 import org.sfsoft.android_mapas2.base.Gasolinera;
 import org.sfsoft.android_mapas2.base.Ubicacion;
 import org.sfsoft.android_mapas2.database.Database;
 import org.sfsoft.android_mapas2.util.Constantes;
 
-import android.app.Fragment;
-import android.content.Context;
 import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
@@ -24,7 +19,6 @@ import android.widget.Toast;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
 import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
-import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
@@ -34,19 +28,18 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.MapsInitializer;
-import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * Activity que representa el mapa de la aplicación
- * 
+ * y pinta ubicaciones de Gasolineras o Ubicaciones propias
  * @author Santiago Faci
  * @version curso 2014-2015
  */
 
-public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerClickListener, 
+public class Mapa extends Activity implements OnClickListener, OnMarkerClickListener,
 	ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
 
 	private GoogleMap mapa;
@@ -72,20 +65,16 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
 		btDistancia.setOnClickListener(this);
 		
 		// Inicializa el sistema de mapas de Google
-        //try {
-            MapsInitializer.initialize(this);
-        /*} catch (GooglePlayServicesNotAvailableException e) {
-            e.printStackTrace();
-        }*/
+        MapsInitializer.initialize(this);
         
         // Obtiene una referencia al objeto que permite "manejar" el mapa
-        mapa = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+        mapa = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
         mapa.setOnMarkerClickListener(this);
         
         // Comprueba si hay que mostrar una gasolinera o toda la lista
         String accion = getIntent().getStringExtra("accion");
         if (accion.equals("gasolinera")) {
-	        Gasolinera gasolinera = (Gasolinera) getIntent().getParcelableExtra("gasolinera");
+	        Gasolinera gasolinera = getIntent().getParcelableExtra("gasolinera");
 	        if (gasolinera != null)
 	        	marcarGasolinera(gasolinera);
         }
@@ -95,8 +84,19 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
         		marcarGasolineras(gasolineras);
         	}
         }
+        else if (accion.equals("ubicacion")) {
+            Ubicacion ubicacion = getIntent().getParcelableExtra("ubicacion");
+            if (ubicacion != null)
+                marcarUbicacion(ubicacion);
+        }
+        else if (accion.equals("ubicaciones")) {
+            ArrayList<Ubicacion> ubicaciones = getIntent().getParcelableArrayListExtra("ubicaciones");
+            if (ubicaciones != null) {
+                marcarUbicaciones(ubicaciones);
+            }
+        }
         else {
-        	// Sólo mostrar mapa
+        	// Sólo mostrar mapa, no hacer nada
         }
         
         // Activa el botón para localizar mi posición
@@ -140,6 +140,7 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
 
 	/**
 	 * Añade la marca de una gasolinera
+     * @param gasolinera
 	 */
 	private void marcarGasolinera(Gasolinera gasolinera) {
 		
@@ -157,6 +158,27 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
     	mapa.moveCamera(camara);
     	mapa.animateCamera(CameraUpdateFactory.zoomTo(12.0f), 2000, null);
 	}
+
+    /**
+     * Añade la marca de una Ubicación
+     * @param ubicacion
+     */
+    private void marcarUbicacion(Ubicacion ubicacion) {
+
+        // Prepara y añade una nueva marca al mapa
+        mapa.addMarker(new MarkerOptions()
+                .position(ubicacion.getPosicion())
+                .title(ubicacion.getNombre()));
+
+        // Posiciona la vista del usuario en el punto que se acaba de agregar
+        CameraUpdate camara =
+                CameraUpdateFactory.newLatLng(ubicacion.getPosicion());
+
+        // Coloca la vista del mapa sobre la posición de la gasolinera
+        // y activa el zoom para verlo de cerca
+        mapa.moveCamera(camara);
+        mapa.animateCamera(CameraUpdateFactory.zoomTo(12.0f), 2000, null);
+    }
 	
 	/**
 	 * Añade las marcas de todas las gasolineras
@@ -181,30 +203,61 @@ public class Mapa extends FragmentActivity implements OnClickListener, OnMarkerC
     	mapa.animateCamera(CameraUpdateFactory.zoomTo(9.0f), 2000, null);
 	}
 
+    /**
+     * Añade las marcas de todas las Ubicaciones
+     * @param ubicaciones
+     */
+    private void marcarUbicaciones(ArrayList<Ubicacion> ubicaciones) {
+
+        if (ubicaciones.size() > 0) {
+            for (Ubicacion ubicacion : ubicaciones) {
+
+                marcarUbicacion(ubicacion);
+            }
+        }
+
+        // Posiciona la vista del usuario en Zaragoza
+        CameraUpdate camara =
+                CameraUpdateFactory.newLatLng(Constantes.ZARAGOZA);
+
+        // Coloca la vista del mapa sobre la posición de la ciudad
+        // y activa el zoom para verlo de cerca
+        mapa.moveCamera(camara);
+        mapa.animateCamera(CameraUpdateFactory.zoomTo(9.0f), 2000, null);
+    }
+
 	public void onClick(View v) {
 		
 		switch (v.getId()) {
 		case R.id.btGuardarPosicion:
 			// Guarda la posición actual en la Base de Datos
 			Location location = mapa.getMyLocation();
-			Ubicacion ubicacion = new Ubicacion();
-			ubicacion.setNombre("");
-			ubicacion.setPosicion(new LatLng(location.getLatitude(), location.getLongitude()));
-			database.nuevaUbicacion(ubicacion);
+            if (location != null) {
+                Ubicacion ubicacion = new Ubicacion();
+                ubicacion.setNombre("Desde Mapa");
+                ubicacion.setPosicion(new LatLng(location.getLatitude(), location.getLongitude()));
+                database.nuevaUbicacion(ubicacion);
+            }
+            else {
+                Toast.makeText(this, R.string.sinubicacion_message, Toast.LENGTH_SHORT).show();
+            }
 			break;
 		case R.id.btVerMiPosicion:
-			
+			// TODO
 			break;
 		case R.id.btDistancia:
 			// Calcula la distancia en metros entre la posición actual y la última marca pulsada
 			Location yo = locationClient.getLastLocation();
-			if (marker != null) {
+			if ((marker != null) && (yo != null)) {
 				Location loc = new Location(marker.getTitle());
 				loc.setLatitude(marker.getPosition().latitude);
 				loc.setLongitude(marker.getPosition().longitude);
 				
 				Toast.makeText(this, String.valueOf(yo.distanceTo(loc)), Toast.LENGTH_LONG).show();
 			}
+            else {
+                Toast.makeText(this, R.string.distancia_error_message, Toast.LENGTH_LONG).show();
+            }
 			
 			break;
 		default:

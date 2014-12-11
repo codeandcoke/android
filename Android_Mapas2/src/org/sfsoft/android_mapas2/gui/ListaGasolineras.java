@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -51,6 +50,7 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 	private ArrayList<Gasolinera> listaGasolineras;
 	private GasolineraAdapter adapter;
 
+    // Añade el menú de opciones al fragmento
 	public void onCreate(Bundle savedInstanceState) {
 	    
 	    super.onCreate(savedInstanceState);
@@ -63,9 +63,9 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 	
 		View view = inflater.inflate(R.layout.lista_gasolineras, container, false);
 		
-		listaGasolineras = new ArrayList<Gasolinera>();
+		listaGasolineras = new ArrayList<>();
 		ListView lvListaGasolineras = (ListView) view.findViewById(R.id.lvListaGasolineras);
-		adapter = new GasolineraAdapter(getActivity(), R.layout.item, listaGasolineras);
+		adapter = new GasolineraAdapter(getActivity(), R.layout.item_gasolinera, listaGasolineras);
 		lvListaGasolineras.setAdapter(adapter);
 		lvListaGasolineras.setOnItemClickListener(this);
 		
@@ -151,7 +151,7 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 		protected void onCancelled() {
 			super.onCancelled();
 			adapter.clear();
-			listaGasolineras = new ArrayList<Gasolinera>();
+			listaGasolineras = new ArrayList<>();
 		}
 		
 		@Override
@@ -169,7 +169,8 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View view, int posicion, long id) {
-		
+
+        // Muestra la gasolinera seleccionada en el mapa
 		Gasolinera gasolinera = listaGasolineras.get(posicion);
 		Intent i = new Intent(getActivity(), Mapa.class);
 		i.putExtra("accion", "gasolinera");
@@ -184,8 +185,10 @@ public class ListaGasolineras extends Fragment implements OnItemClickListener {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+
 	    switch (item.getItemId()) {
 	    case R.id.opcion_mapa:
+            // Muestra todas las gasolineras en el mapa
 	        Intent i = new Intent(getActivity(), Mapa.class);
 	        i.putExtra("accion", "gasolineras");
 	        i.putParcelableArrayListExtra("gasolineras", listaGasolineras);

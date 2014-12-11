@@ -18,6 +18,6 @@ public interface Constantes extends BaseColumns {
 	public static final String NOMBRE = "nombre";
 	public static final String LATITUD = "latitud";
 	public static final String LONGITUD = "longitud";
-	
-	public static final LatLng ZARAGOZA = new LatLng(41.654573, 0.882511);
+
+	public static final LatLng ZARAGOZA = new LatLng(41.652333, -0.886913);
 }

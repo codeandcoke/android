@@ -12,16 +12,22 @@ import com.google.android.gms.maps.model.LatLng;
  */
 public class Ubicacion implements Parcelable {
 
+    private int id;
 	private String nombre;
 	private LatLng posicion;
 	
 	public Ubicacion() {}
 	
 	public Ubicacion(Parcel entrada) {
-        
+
+        id = entrada.readInt();
         nombre = entrada.readString();
         posicion = entrada.readParcelable(LatLng.class.getClassLoader());
     }
+
+    public void setId(int id) { this.id = id; }
+
+    public int getId() { return id; }
 
 	public String getNombre() {
 		return nombre;
@@ -46,6 +52,7 @@ public class Ubicacion implements Parcelable {
 	
 	@Override
 	public void writeToParcel(Parcel destino, int flags) {
+        destino.writeInt(id);
 	    destino.writeString(nombre);
 	    destino.writeParcelable(posicion, flags);
 	}

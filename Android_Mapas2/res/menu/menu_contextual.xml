@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+	<item 
+	    android:id="@+id/ctx_editar"
+	    android:title="Editar"
+	    android:showAsAction="always"
+	    android:icon="@drawable/ubicacion">
+	</item>
+    <item
+            android:id="@+id/ctx_eliminar"
+            android:title="Eliminar"
+            android:showAsAction="always"
+            android:icon="@drawable/ubicacion">
+    </item>
+</menu>

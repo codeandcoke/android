@@ -31,6 +31,7 @@ public class TabsListener implements ActionBar.TabListener {
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
 		
 		// Aquí por ejemplo se podría refrescar la vista
+        ft.replace(R.id.contenedor, fragmento);
 	}
 
 	/**
