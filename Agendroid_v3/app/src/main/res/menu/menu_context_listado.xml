@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_fijo"
+        android:title="@string/lb_llamar_fijo"/>
+    <item android:id="@+id/action_movil"
+        android:title="@string/lb_llamar_movil"/>
+    <item android:id="@+id/action_editar"
+        android:title="@string/lb_editar"/>
+    <item android:id="@+id/action_eliminar"
+        android:title="@string/lb_eliminar"/>
+    <item android:id="@+id/action_email"
+        android:title="@string/lb_enviar_email"/>
+    <item android:id="@+id/action_detalles"
+        android:title="@string/lb_ver_detalles"/>
+</menu>

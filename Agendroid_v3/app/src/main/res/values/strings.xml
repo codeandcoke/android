@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Agenda</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_registro">Registro</string>
+    <string name="title_activity_listado">Listado</string>
+    <string name="lb_nombre_apellidos">Nombre y Apellidos</string>
+    <string name="lb_email">E-mail</string>
+    <string name="lb_telefono_fijo">Teléfono fijo</string>
+    <string name="lb_telefono_movil">Teléfono móvil</string>
+    <string name="lb_fecha_nacimiento">Fecha de Nacimiento</string>
+    <string name="lb_deudas">Deudas</string>
+    <string name="lb_guardar">Guardar</string>
+    <string name="lb_cancelar">Cancelar</string>
+    <string name="lb_registrar">Registrar</string>
+    <string name="lb_listado">Listar</string>
+    <string name="error_fecha">Comprueba el formato de fecha</string>
+    <string name="lb_llamar_fijo">Llamar al fijo</string>
+    <string name="lb_llamar_movil">Llamar al móvil</string>
+    <string name="lb_editar">Editar</string>
+    <string name="lb_enviar_email">Enviar e-mail</string>
+    <string name="lb_eliminar">Eliminar</string>
+    <string name="lb_ver_detalles">Ver detalles</string>
+    <string name="lb_esta_seguro">¿Está seguro?</string>
+    <string name="lb_si">Si</string>
+    <string name="lb_no">No</string>
+    <string name="title_activity_detalles">Detalles</string>
+    <string name="lb_guardado">Los datos se han guardado con éxito</string>
+    <string name="lb_eliminado">El contacto se ha eliminado</string>
+
+</resources>
