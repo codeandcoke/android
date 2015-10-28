@@ -5,6 +5,7 @@ Ejemplos de programación con Android
 
 - **Agendroid_v1**: Ejemplo de agenda de contactos en Android
 - **Agendroid_v2**: Evolución sobre la primera versión de la agenda de contactos
+- **Agendroid_v3**: Agenda de contactos para el curso 2015-2016
 - **Android_BBDD**: Ejemplo de cómo trabajar con Bases de Datos SQLite y TabHost en Android
 - **Android_ComunicarActivities**: Cómo enviar información entre dos `Activity`
 - **Android_Controles**: Ejemplo que muestra los principales controles de una pantalla de Android
