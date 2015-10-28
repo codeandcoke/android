@@ -14,7 +14,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.sfaci.agenda.base.Amigo;
@@ -39,7 +38,7 @@ public class Registro extends Activity implements View.OnClickListener {
 
         Button btGuardar = (Button) findViewById(R.id.btGuardar);
         btGuardar.setOnClickListener(this);
-        Button btCancelar = (Button) findViewById(R.id.btCancelar);
+        Button btCancelar = (Button) findViewById(R.id.btCerrar);
         btCancelar.setOnClickListener(this);
         ImageButton ibFoto = (ImageButton) findViewById(R.id.ibFoto);
         ibFoto.setOnClickListener(this);
@@ -156,8 +155,8 @@ public class Registro extends Activity implements View.OnClickListener {
                 // TODO Limpiar el contenido de las cajas de texto
 
                 break;
-            case R.id.btCancelar:
-
+            case R.id.btCerrar:
+                onBackPressed();
                 break;
             case R.id.ibFoto:
                 Intent intent = new Intent(Intent.ACTION_PICK,
