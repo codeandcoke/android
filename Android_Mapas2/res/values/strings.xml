@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Gasolineras Zaragoza</string>
+    <string name="app_name">Gasolineras Zaragoza 2</string>
     <string name="listado_gasolineras_title">Listado</string>
     <string name="mapa_title">Mapa</string>
     <string name="misubicaciones_title">Mis Ubicaciones</string>
@@ -17,4 +17,15 @@
     
     <string name="error_message">Error al cargar los datos</string>
     <string name="datos_message">Datos Cargados</string>
+    <string name="nombre_label">Nombre</string>
+    <string name="latitud_label">Latitud</string>
+    <string name="longitud_label">Longitud</string>
+
+    <string name="nueva_ubicacion_message">Ubicación registrada</string>
+    <string name="distancia_error_message">Se necesita tu ubicación y la de una gasolinera</string>
+
+    <string name="btaceptar_label">Aceptar</string>
+    <string name="btcancelar_label">Cancelar</string>
+    <string name="estaseguro_message">¿Está seguro?</string>
+    <string name="sinubicacion_message">Sin ubicación. ¿Has activado el GPS?</string>
 </resources>

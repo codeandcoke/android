@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import org.sfaci.agenda.base.Amigo;
 
+import java.text.SimpleDateFormat;
+
 
 public class Detalles extends Activity {
 
@@ -38,7 +40,8 @@ public class Detalles extends Activity {
         tvEmail.setText(amigo.getEmail());
         tvTelefonoFijo.setText(amigo.getTelefonoFijo());
         tvTelefonoMovil.setText(amigo.getTelefonoMovil());
-        tvFechaNacimiento.setText(amigo.getFechaNacimiento().toString());
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        tvFechaNacimiento.setText(sdf.format(amigo.getFechaNacimiento()));
         tvDeudas.setText(String.valueOf(amigo.getDeudas()));
     }
 

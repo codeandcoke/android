@@ -30,5 +30,6 @@
     <string name="title_activity_detalles">Detalles</string>
     <string name="lb_guardado">Los datos se han guardado con éxito</string>
     <string name="lb_eliminado">El contacto se ha eliminado</string>
+    <string name="selecciona_email">Selecciona aplicación</string>
 
 </resources>

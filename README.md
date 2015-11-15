@@ -22,6 +22,9 @@ Ejemplos de programación con Android
 - **Android_Sonido**: Ejemplo de reproducción de audio en Android
 - **Android_Tabs**: Cómo crear un interfaz con pestañas en Android y manejar Bases de Datos
 - **Android_WS_Tarea**: Cómo conectar con un Servicio Web remoto y parsear datos en _JSON_
-- **Guia_Restaurantes**: Ejemplo de aplicación que carga una lista de información sobre restaurantes en _JSON_ y muestra la ubicación de cada uno en un Mapa
+- **Guia_Restaurantes**: Ejemplo de aplicación que carga una lista de información sobre restaurantes en _JSON_ y muestra la ubicación de
+  cada uno en un Mapa (Proyecto para Eclipse)
+- **Guia_Restaurantes2015**: Ejemplo de aplicación que carga una lista de información sobre restaurantes en _JSON_ y muestra la ubicación de
+  cada uno en un Mapa (Proyecto para Android Studio)
 - **HolaAndroid**: Ejemplo de _Hola Mundo_ en Android
 

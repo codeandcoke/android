@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">GuiaRestaurantes</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_listado_restaurantes">Guía Restaurantes</string>
+    <string name="title_activity_mapa">Mapa</string>
+    <string name="imagen_label">Restaurante</string>
+    
+    <string name="error_message">Error al cargar los datos</string>
+    <string name="datos_message">Datos cargados</string>
+    
+</resources>

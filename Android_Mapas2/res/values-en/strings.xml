@@ -1,20 +1,26 @@
 <resources>
 
-    <string name="app_name">Gasolineras Zaragoza</string>
-    <string name="listado_gasolineras_title">Listado</string>
-    <string name="mapa_title">Mapa</string>
-    <string name="misubicaciones_title">Mis Ubicaciones</string>
+    <string name="app_name">Zaragoza Gas Stations 2</string>
+    <string name="listado_gasolineras_title">List</string>
+    <string name="mapa_title">Map</string>
+    <string name="misubicaciones_title">My Locations</string>
     
-    <string name="menu_settings">Opciones</string>
+    <string name="menu_settings">Options</string>
     
-    <string name="aceptar_message">Aceptar</string>
-    <string name="cancelar_message">Cancelar</string>
-    <string name="empty_message">Sin datos</string>
-    <string name="imagen_label">Imagen</string>
-    <string name="btguardarposicion_label">Guardar Posición</string>
-    <string name="btvermiposicion_label">Mi posición</string>
-    <string name="btdistancia_label">Distancia</string>
+    <string name="aceptar_message">Accept</string>
+    <string name="cancelar_message">Cancel</string>
+    <string name="empty_message">No data</string>
+    <string name="imagen_label">Image</string>
+    <string name="btguardarposicion_label">Save Location</string>
+    <string name="btvermiposicion_label">My Location</string>
+    <string name="btdistancia_label">Distance</string>
     
-    <string name="error_message">Error al cargar los datos</string>
-    <string name="datos_message">Datos Cargados</string>
+    <string name="error_message">Error loading data</string>
+    <string name="datos_message">Data loaded</string>
+
+    <string name="distancia_error_message">Your location and gas station location are needed</string>
+    <string name="btaceptar_label">Accept</string>
+    <string name="btcancelar_label">Cancel</string>
+    <string name="estaseguro_message">¿Are you sure?</string>
+    <string name="sinubicacion_message">No Location. Is the GPS activated?</string>
 </resources>

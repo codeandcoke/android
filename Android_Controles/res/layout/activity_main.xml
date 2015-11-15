@@ -27,7 +27,7 @@
         android:layout_alignRight="@+id/editText"
         android:layout_below="@+id/editText"
         android:layout_marginTop="14dp"
-        android:text="@string/toggleButtonText" />
+        android:text="@string/toggleButtonText" android:checked="false"/>
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -36,7 +36,7 @@
         android:layout_alignLeft="@+id/editText"
         android:layout_below="@+id/toggleButton"
         android:layout_marginTop="15dp"
-        android:text="@string/checkBoxText" />
+        android:text="@string/checkBoxText" android:checked="false"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"

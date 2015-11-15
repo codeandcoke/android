@@ -2,6 +2,9 @@ package org.sfaci.agenda;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -37,6 +40,12 @@ public class Listado extends Activity {
         lvAmigos.setAdapter(adapter);
 
         registerForContextMenu(lvAmigos);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        adapter.notifyDataSetChanged();
     }
 
     @Override
@@ -110,16 +119,34 @@ public class Listado extends Activity {
                                         adapter.notifyDataSetChanged();
                                         Toast.makeText(Listado.this, R.string.lb_eliminado, Toast.LENGTH_LONG).show();
                                     }
+                                })
+                        .setNegativeButton(R.string.lb_si,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        dialog.dismiss();
+                                    }
                                 });
                 builder.create().show();
                 break;
             case R.id.action_email:
-                // TODO Enviar un email
+                amigo = MainActivity.listaAmigos.get(itemSeleccionado);
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, amigo.getEmail());
+                emailIntent.setType("message/rfc822");
+                startActivity(Intent.createChooser(emailIntent, getString(R.string.selecciona_email)));
                 break;
             case R.id.action_detalles:
                 Intent intentDetalles = new Intent(this, Detalles.class);
                 intentDetalles.putExtra("posicion", itemSeleccionado);
                 startActivity(intentDetalles);
+
+                Notification.Builder nBuilder = new Notification.Builder(this)
+                        .setSmallIcon(android.R.drawable.ic_notification_overlay)
+                        .setContentTitle("Prueba")
+                        .setContentText("Esto es una notificacion");
+                NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+                manager.notify(0, nBuilder.build());
                 break;
             default:
                 break;

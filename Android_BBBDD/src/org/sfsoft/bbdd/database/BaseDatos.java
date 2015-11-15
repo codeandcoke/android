@@ -19,7 +19,7 @@ import static org.sfsoft.bbdd.database.Constantes.TABLA_ALUMNOS;
 public class BaseDatos extends SQLiteOpenHelper {
 
 	// Nombre de la base de datos
-	private static final String BASEDATOS_NOMBRE = "falton.db";
+	private static final String BASEDATOS_NOMBRE = "android_bbdd.db";
 	// Versión de la base de datos
 	private static final int BASEDATOS_VERSION = 1;
 	
