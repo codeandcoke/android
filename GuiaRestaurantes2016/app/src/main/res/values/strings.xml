@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GuiaRestaurantes</string>
+    <string name="title_activity_mapa">Mapa</string>
+    <string name="error_message">No se han podido descargar los datos</string>
+    <string name="datos_message">Datos descargados</string>
+
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="@dimen/imagen_width"
+            android:layout_height="@dimen/imagen_height"
+            android:id="@+id/imagenRestaurante"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/imagen_height">
+        <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/nombreRestaurante" android:layout_gravity="center_horizontal|left"/>
+        <TextView
+                android:layout_width="264dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/descripcionRestaurante"/>
+        <TextView
+                android:layout_width="276dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/categoriaRestaurante" android:layout_gravity="center_horizontal|left"/>
+    </LinearLayout>
+</LinearLayout>
