@@ -25,5 +25,6 @@ Ejemplos de programación con Android
   cada uno en un Mapa (Proyecto para Eclipse)
 - **Guia_Restaurantes2016**: Ejemplo de aplicación que carga una lista de información sobre restaurantes en _JSON_ y muestra la ubicación de
   cada uno en un Mapa (Proyecto para Android Studio)
+- **EjemploMapbox**: Ejemplo de aplicación que muestra cómo cargar un mapa utilizando la librería Mapbox
 - **HolaAndroid**: Ejemplo de _Hola Mundo_ en Android
 
